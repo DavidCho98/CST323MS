@@ -29,4 +29,11 @@ class HomeController extends Controller
 
         return view('home',['posts'=> $posts]);
     }
+
+    public function logout(Request $request){
+        $request->session()->flush();
+
+        return $this->index();
+    }
+
 }

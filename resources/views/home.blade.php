@@ -10,8 +10,6 @@
             <small>Secondary Text</small>
         </h1>
 
-        <!-- Blog Post -->
-
     @foreach($posts as $post)
         <div class="card mb-4">
             <img class="card-img-top" src="{{$post->post_image}}" alt="Card image cap">
@@ -22,10 +20,8 @@
             </div>
             <div class="card-footer text-muted">
 
-                <!-- diffForHumans() shows how many minutes ago it was created.
                 Posted on {{$post->created_at->diffForHumans()}}-->
 
-                    <!--This shows the created time-->
                 Posted on {{$post->created_at}}
 
                 <a href="#">Start Bootstrap</a>
@@ -33,24 +29,6 @@
         </div>
     @endforeach
 
-
-        <!-- Pagination -->
-        <ul class="pagination justify-content-center mb-4">
-            <li class="page-item">
-                <a class="page-link" href="#">&larr; Older</a>
-            </li>
-            <li class="page-item disabled">
-                <a class="page-link" href="#">Newer &rarr;</a>
-            </li>
-        </ul>
-
-
-
     @endsection
-
-
-
-
-
 
 </x-home-main>
