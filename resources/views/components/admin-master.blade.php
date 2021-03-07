@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 
-    <link href="{{asset('public/css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
 
 </head>
 
@@ -28,7 +28,7 @@
 
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -44,11 +44,7 @@
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Profile</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('post.create')}}">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Create Post</span></a>
-        </li>
+
 
 
         <hr class="sidebar-divider">
@@ -57,6 +53,24 @@
         <div class="sidebar-heading">
             Interface
         </div>
+
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{route('post.create')}}" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Posts</span>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Create</h6>
+                    <a class="collapse-item" href="{{route('post.create')}}">Create a post</a>
+                </div>
+            </div>
+        </li>
+
+        <!--- <x-admin-sidebar-posts-links>
+
+         </x-admin-sidebar-posts-links>--->
 
 
     </ul>
@@ -189,3 +203,8 @@
 </body>
 
 </html>
+
+
+
+
+
