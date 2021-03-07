@@ -50,4 +50,5 @@ class SecurityService
     public function logout(){
         return $this->dao->logout();
 }
+
 }
